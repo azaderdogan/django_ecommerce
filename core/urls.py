@@ -5,9 +5,9 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('basket/', include('basket.urls', namespace='basket')),
-    # ilgili url dosyasında app_name basket olanla eşleşlir
     path('', include('store.urls', namespace='store')),
+    path('basket/', include('basket.urls', namespace='basket')),
+    path('account/', include('account.urls', namespace='account')),
 
 ]
 
